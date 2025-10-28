@@ -1,0 +1,510 @@
+/* Module-scoped styles only */
+.a4-box {
+  width: 21cm;
+  min-height: 29.7cm;
+  max-height: none;         /* <-- allow infinite height in scroll mode */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  font-family: Courier, monospace;
+  z-index: 100;
+  font-size: 13px;
+  line-height: 1.2;
+  position: relative; /* Ensure relative for absolute footer */
+}
+
+/* Dark mode: ensure script content area stays white with black text */
+body.dark-mode .a4-box {
+  background-color: white !important;
+  color: black !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Dark mode: ensure all content inside a4-box stays readable */
+body.dark-mode .a4-box * {
+  color: black !important;
+}
+
+/* Dark mode: ensure form elements inside script stay white */
+body.dark-mode .a4-box form {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Dark mode: ensure all input types maintain white background */
+body.dark-mode .a4-box input,
+body.dark-mode .a4-box textarea {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Dark mode: ensure placeholders are visible */
+body.dark-mode .a4-box input::placeholder,
+body.dark-mode .a4-box textarea::placeholder {
+  color: #666 !important;
+}
+
+/* Dark mode: ensure center elements maintain black text */
+body.dark-mode .a4-box center {
+  color: black !important;
+}
+
+/* Dark mode: ensure paragraph elements maintain black text */
+body.dark-mode .a4-box p {
+  color: black !important;
+}
+
+/* Dark mode: ensure span elements maintain black text */
+body.dark-mode .a4-box span {
+  color: black !important;
+}
+
+/* Dark mode: ensure div elements maintain black text */
+body.dark-mode .a4-box div {
+  color: black !important;
+}
+
+/* Dark mode: ensure datalist options are visible */
+body.dark-mode .a4-box datalist option {
+  color: black !important;
+  background-color: white !important;
+}
+
+/* Override global dark mode styles for script content area */
+body.dark-mode .a4-box input,
+body.dark-mode .a4-box textarea,
+body.dark-mode .a4-box select {
+  background-color: white !important;
+  color: black !important;
+  border-color: #ccc !important;
+}
+
+/* Ensure script content area overrides any inherited dark styles */
+body.dark-mode .a4-box {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Force all text elements inside script to be black */
+body.dark-mode .a4-box *,
+body.dark-mode .a4-box *::before,
+body.dark-mode .a4-box *::after {
+  color: black !important;
+}
+
+/* Ensure specific script elements maintain white background */
+body.dark-mode .a4-box .formContainer1,
+body.dark-mode .a4-box form,
+body.dark-mode .a4-box .a4Footer {
+  background-color: white !important;
+  color: black !important;
+}
+
+.lg-box {
+  width: 21cm;
+  min-height: 5cm;
+  max-height: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  font-family: Courier, monospace;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Dark mode: ensure large box stays white with black text */
+body.dark-mode .lg-box {
+  background-color: white !important;
+  color: black !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.formContainer1 {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dark mode: ensure form container text stays black */
+body.dark-mode .formContainer1 {
+  color: black !important;
+}
+
+/* Input styles need to be scoped to classes */
+.textInput {
+  width: 80%;
+  max-width: 600px;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin: 10px 0;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Dark mode: ensure input text stays black */
+body.dark-mode .textInput {
+  color: black !important;
+  background-color: white !important;
+}
+
+.cuntInput {
+  width: 25px;
+  border: none;
+  outline: none;
+  text-align: left;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Dark mode: ensure input text stays black */
+body.dark-mode .cuntInput {
+  color: black !important;
+  background-color: white !important;
+}
+
+.settextInput {
+  width: 80px;
+  border: none;
+  padding-inline-start: 5px;
+  outline: none;
+  text-align: left;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Dark mode: ensure input text stays black */
+body.dark-mode .settextInput {
+  color: black !important;
+  background-color: white !important;
+}
+
+.loctextInput {
+  width: auto;
+  min-width: 10px;
+  max-width: 500px;
+  padding-inline-start: 5px;
+  border: none;
+  outline: none;
+  text-align: left;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Dark mode: ensure input text stays black */
+body.dark-mode .loctextInput {
+  color: black !important;
+  background-color: white !important;
+}
+
+.tymInput {
+  width: auto;
+  min-width: 150px;
+  padding-inline-start: 5px;
+  border: none;
+  text-align: left;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+/* Dark mode: ensure input text stays black */
+body.dark-mode .tymInput {
+  color: black !important;
+  background-color: white !important;
+}
+
+.acttext {
+  width: 80%;
+  border: none;
+  outline: none;
+  margin: 0px auto;
+  font-family: Courier, monospace;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: transparent;
+  min-height: auto;
+  white-space: pre-wrap;
+}
+
+/* Dark mode: ensure action text stays black */
+body.dark-mode .acttext {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.characterInput {
+  width: auto;
+  min-width: 150px;
+  max-width: 750px;
+  border: none;
+  text-align: center;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  min-height: 11px;
+  max-height: none;
+  overflow: hidden;
+  resize: none;
+  white-space: pre-wrap;
+  line-height: 1.2;
+}
+
+/* Dark mode: ensure character input text stays black */
+body.dark-mode .characterInput {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.parentheticalInput {
+  width: auto;
+  min-width: 50px;
+  max-width: 700px;
+  border: none;
+  text-align: center;
+  margin: 0px;
+  font-family: Courier, monospace;
+  font-weight: bold;
+  outline: none;
+  white-space: nowrap;
+}
+
+/* Dark mode: ensure parenthetical input text stays black */
+body.dark-mode .parentheticalInput {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.dialogueTextarea {
+  width: 80%;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin: 0px auto;
+  font-family: Courier, monospace;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: transparent;
+  min-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-wrap;
+}
+
+/* Dark mode: ensure dialogue text stays black */
+body.dark-mode .dialogueTextarea {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.transisInput {
+  width: auto;
+  min-width: 150px;
+  border: none;
+  text-align: right;
+  margin: 0px;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+/* Dark mode: ensure transition input text stays black */
+body.dark-mode .transisInput {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+/* Form-specific styles */
+.authInput {
+  width: 80%;
+  max-width: 600px;
+  height: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  text-align: center;
+  margin: 10px auto;
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+}
+
+/* Dark mode: ensure auth input text stays black */
+body.dark-mode .authInput {
+  color: black !important;
+  background-color: white !important;
+  border-color: #666 !important;
+}
+
+/* Focus states */
+.textInput:focus,
+.authInput:focus {
+  border-color: blue;
+}
+
+/* Dark mode focus states */
+body.dark-mode .textInput:focus,
+body.dark-mode .authInput:focus {
+  border-color: #3b82f6 !important;
+}
+
+/* Calculator styles - scoped to calculator class */
+.calculator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode calculator */
+body.dark-mode .calculator {
+  background-color: #2c2c2c !important;
+  border-color: #555 !important;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1) !important;
+}
+
+.calculatorDisplay {
+  border: 1px solid #d4d4d4;
+  background-color: #e9e9e9;
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Dark mode calculator display */
+body.dark-mode .calculatorDisplay {
+  background-color: #1a1a1a !important;
+  border-color: #555 !important;
+  color: white !important;
+}
+
+.calculatorButton {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Dark mode calculator button */
+body.dark-mode .calculatorButton {
+  background-color: #444 !important;
+  color: white !important;
+  border-color: #666 !important;
+}
+
+.a4Footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color: #000000;
+  z-index: 10;
+  background: white;
+  padding: 4px 0;
+}
+
+/* Dark mode: ensure footer stays white with black text */
+body.dark-mode .a4Footer {
+  background: white !important;
+  color: #000000 !important;
+}
+
+.a4PageNumber {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 160;
+}
+
+/* Dark mode: ensure page number stays black */
+body.dark-mode .a4PageNumber {
+  color: #000000 !important;
+}
+
+@media print {
+  .a4-box {
+    position: relative !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 auto !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    max-width: 210mm !important;
+    max-height: 297mm !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .a4Footer {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 16px !important;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+    background: white;
+    padding: 4px 0;
+  }
+.a4PageNumber {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 160;
+}
+}
+
+.datalistInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.datalistInput::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.datalistInput::-webkit-list-button {
+  display: none;
+}

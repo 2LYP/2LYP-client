@@ -1,0 +1,170 @@
+/* styles/lines.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 80px;
+  row-gap: 130px;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  grid-column: span 1;
+  grid-row: span 1;
+  position: relative;
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode: make dots white */
+body.dark-mode .dot {
+  background-color: white;
+}
+.line {
+  position: absolute;
+  height: 5px;
+  background-color: transparent;
+  transform-origin: top left;
+  z-index: 1;
+  width: 0;
+  animation: draw 2s ease-in-out forwards;
+  --line-width: 0;
+}
+
+@keyframes draw {
+  from { width: 0; }
+  to { width: var(--line-width); }
+}
+
+/* Lines for "2" */
+.line-2-1 {
+  background-color: red;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 210px;
+  top: -3px;
+  left: 183px;
+}
+.line-2-2 {
+  background-color: red;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 5px;
+  left: 400px;
+}
+.line-2-3 {
+  background-color: red;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 210px;
+  top: 143px;
+  left: 93px;
+}
+.line-2-4 {
+  background-color: red;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 150px;
+  left: 115px;
+}
+.line-2-5 {
+  background-color: red;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 210px;
+  top: 290px;
+  left: 0px;
+}
+
+/* Lines for "L" */
+.line-l-1 {
+  background-color: #00aeef;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 365px;
+  top: 3px;
+  left: 495px;
+}
+.line-l-2 {
+  background-color: #00aeef;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 200px;
+  top: 290px;
+  left: 295px;
+}
+
+/* Lines for "Y" */
+.line-y-1 {
+  background-color: #1ba754;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 5px;
+  left: 685px;
+}
+.line-y-2 {
+  background-color: #1ba754;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 200px;
+  top: 143px;
+  left: 575px;
+}
+.line-y-3 {
+  background-color: #1ba754;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 5px;
+  left: 875px;
+}
+.line-y-4 {
+  background-color: #1ba754;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 150px;
+  left: 690px;
+}
+
+/* Lines for "P" */
+.line-p-1 {
+  background-color: yellow;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 210px;
+  top: -3px;
+  left: 945px;
+}
+
+.line-p-2 {
+  background-color: yellow;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 365px;
+  top: 3px;
+  left: 970px;
+}
+.line-p-3 {
+  background-color: yellow;
+  transform: rotate(123deg);
+  height: 18px;
+  --line-width: 190px;
+  top: 5px;
+  left: 1158px;
+}
+.line-p-4 {
+  background-color: yellow;
+  transform: rotate(0deg);
+  height: 18px;
+  --line-width: 200px;
+  top: 143px;
+  left: 855px;
+}

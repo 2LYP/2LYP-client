@@ -1,0 +1,42 @@
+/* components/ui/Logo.module.css */
+
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diamond {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border: 2.25px solid black;
+}
+.inner-diamond {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  background-color: transparent;
+  border-width: var(--border-width, 2.25px);
+  border-style: solid;
+  border-top-color: var(--border-top-color, #FF0000);
+  border-right-color: var(--border-right-color, #00aeef);
+  border-bottom-color: var(--border-bottom-color, #1ba754);
+  border-left-color: var(--border-left-color, #FFFF00);
+}
+.stem {
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background-color: black;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
