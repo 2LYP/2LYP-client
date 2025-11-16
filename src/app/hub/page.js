@@ -12,12 +12,6 @@ import Dashboard from "@/components/Dashboard";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-// @dev web3 imports
-import { useReadContract, useAccount } from "wagmi";
-
-
-// @dev web3 states
-
 export default function HubPage() {
   const { user, logout, isAuthLoading, refetchUser, handleLogin, handleSignup, authError, setAuthError } = useAuth();
   const isLoggedIn = !!user;
