@@ -36,7 +36,7 @@ const SECTION_DATA = [
     buttonColor: "rgb(255 255 0)",
     items: [
       { name: "About Us", description: "might be boring tho", button: "About Us", route: "/about" },
-      { name: "Faucet", description: "2LYP Tokens Faucet", button: "Claim", route: "/faucet" },
+      { name: "Faucet", description: "2LYP Tokens Faucet", button: "Claim", route: "http://localhost:3001/faucet" },
       { name: "Login", description: "Know your Stats", button: "Login", route: "/hub" },
     ]
   }
