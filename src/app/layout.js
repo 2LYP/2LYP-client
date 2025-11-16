@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "../styles/cursor.css";
 import "../styles/scrollbar.css";
+import WagmiProviderWrapper from "./providers/WagmiProviderWrapper";
+
 
 import Providers from "./providers";
 
@@ -34,7 +36,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          {children}
+           <WagmiProviderWrapper>{children}</WagmiProviderWrapper>
         </Providers>
       </body>
     </html>

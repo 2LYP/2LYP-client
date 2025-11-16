@@ -10,6 +10,24 @@ import Logo from "@/components/ui/Logo";
 import style from "@/components/ui/Button.module.css";
 import dynamic from 'next/dynamic';
 import { useState, useEffect, useCallback, Suspense } from "react";
+import Navbar from "@/components/Navbar";
+import Button from "@/components/ui/Button";
+import WalletIntegrationBox from "@/components/home/WalletIntegrationBox";
+
+import {
+  useTotalSupply,
+  useMaxSupply,
+  useFaucetDrip,
+  useFaucetCooldown,
+  useTokenomicsStatus,
+  useTokenName,
+  useTokenSymbol,
+  useTokenDecimals,
+  useUserBalance,
+} from "../hooks/useOverviewStats";
+
+import {formatEther} from 'viem';
+
 
 // Lazy load non-essential components
 const Background = dynamic(() => import("@/components/ui/Background"), {
@@ -34,13 +52,23 @@ const Coin = dynamic(() => import('@/components/ui/Coin'), {
   )
 });
 
-import Navbar from "@/components/Navbar";
-import Button from "@/components/ui/Button";
-import WalletIntegrationBox from "@/components/home/WalletIntegrationBox";
+
 
 export default function Home() {
   const router = useRouter();
   const { isScrolled, scrollProgress, tokenBoxReveal } = useScrollReveal();
+
+  const { data: totalSupply } = useTotalSupply();
+  const { data: maxSupply } = useMaxSupply();
+  const { data: tokenName } = useTokenName();
+  const { data: tokenSymbol } = useTokenSymbol();
+  const { data: decimals } = useTokenDecimals();
+  const { data: faucetDrip } = useFaucetDrip();
+  const { data: tokenomicsInitialized } = useTokenomicsStatus();
+
+  const totalSupplyFormatted = totalSupply ? parseFloat(formatEther(totalSupply)).toLocaleString() : 'Loading...';
+  const maxSupplyFormatted = maxSupply ? parseFloat(formatEther(maxSupply)).toLocaleString() : 'Loading...';
+  const faucetDripFormatted = faucetDrip ? parseFloat(formatEther(faucetDrip)).toLocaleString() : 'Loading...';
 
   return (
     <main className="relative w-full min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -85,28 +113,28 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4 text-white">Tokenomics</h2>
           <div className="space-y-4 text-white">
             <div>
-              <h3 className="font-semibold">Total Supply</h3>
-              <p>1,000,000,000 2LYP</p>
+              <h3 className="font-semibold">Max Supply Cap</h3>
+              <p>{maxSupplyFormatted} 2LYP</p>
             </div>
             <div>
-              <h3 className="font-semibold">Current Price</h3>
-              <p>$0.0015</p>
+              <h3 className="font-semibold">Current Supply Cap</h3>
+              <p>{totalSupplyFormatted} 2LYP</p>
             </div>
             <div>
-              <h3 className="font-semibold">Market Cap</h3>
-              <p>$1,500,000</p>
+              <h3 className="font-semibold">Token Value</h3>
+              <p>$5</p>
             </div>
           </div>
         </div>
 
         {/* Coin in Center */}
-        <div className="z-10">
+        {/* <div className="z-10">
           <Suspense fallback={
             <div className="w-48 h-48 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
           }>
             <Coin scrollProgress={scrollProgress} showTokenBox={tokenBoxReveal > 0} />
           </Suspense>
-        </div>
+        </div> */}
 
         {/* Right Token Box */}
         <WalletIntegrationBox tokenBoxReveal={tokenBoxReveal} />
