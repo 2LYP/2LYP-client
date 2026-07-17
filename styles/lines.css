@@ -1,5 +1,5 @@
 /* styles/lines.css */
-.grid {
+.logo-grid {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
   gap: 80px;

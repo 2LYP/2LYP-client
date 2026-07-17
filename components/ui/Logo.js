@@ -6,7 +6,7 @@ export default function Logo({ style }) {
   return (
     <div className="logo-container" style={style}>
       <div className={styles.logo}>
-        <div className="grid">
+        <div className="logo-grid">
           {/* Dots */}
           {[...Array(3)].map((_, row) =>
             [...Array(13)].map((_, col) => (

@@ -180,7 +180,7 @@ export default function LoginForm({
           />
         </div>
         <div className="flex justify-center">
-        <Button
+          <Button
             type="submit"
             className="w-full h-12 text-lg !bg-[#ffff00]"
             style={{ fontSize: "20px", height: "60px" }}
@@ -188,7 +188,7 @@ export default function LoginForm({
               isSubmitting}
           >
             {isSubmitting ? "Logging in..." : "Login"}
-        </Button>
+          </Button>
         </div>
       </form>
 

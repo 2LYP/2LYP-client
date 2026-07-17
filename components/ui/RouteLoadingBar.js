@@ -1,10 +1,10 @@
 //components/ui/RouteLoadingBar.js
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function RouteLoadingBar() {
+function RouteLoadingBarInner() {
   const [progress, setProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const animationRef = useRef(null);
@@ -58,7 +58,7 @@ export default function RouteLoadingBar() {
   return (
     <div className="fixed top-0 left-0 w-full h-1 z-50 overflow-hidden">
       <div 
-        className="h-full transition-all duration-200 ease-linear"
+         className="h-full transition-all duration-200 ease-linear"
         style={{ 
           width: `${progress}%`,
           background: `linear-gradient(to right, 
@@ -69,5 +69,13 @@ export default function RouteLoadingBar() {
         }}
       />
     </div>
+  );
+}
+
+export default function RouteLoadingBar() {
+  return (
+    <Suspense fallback={null}>
+      <RouteLoadingBarInner />
+    </Suspense>
   );
 }
