@@ -125,7 +125,7 @@ export default function HubPage() {
   const handleSignupForm = async (e) => {
     e.preventDefault();
     setAuthError(null);
-    
+
     // Validation
     if (!userName.trim() || !email.trim() || !password) {
       setError("Please fill in all required fields.");
@@ -197,13 +197,13 @@ export default function HubPage() {
         toast.error("File size must be less than 5MB");
         return;
       }
-      
+
       // Validate file type
       if (!file.type.startsWith('image/')) {
         toast.error("Please select an image file");
         return;
       }
-      
+
       setProfilePic(file);
       setProfilePicUrl(URL.createObjectURL(file));
     }
@@ -304,11 +304,11 @@ export default function HubPage() {
         <div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div>
         <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div>
         <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
-        
+
         <h1 className="bg-gray-100 p-4 border-3 border-black text-center text-3xl font-bold mb-6 text-black dark:text-white rounded-lg">
           2LYP Hub
         </h1>
-        
+
         {!isLoggedIn ? renderAuthForms() : renderDashboard()}
       </section>
 
@@ -345,8 +345,8 @@ export default function HubPage() {
             ) : (
               <p className="text-black dark:text-white">No scripts found.</p>
             )}
-             {scripts.length > 0 && (
-                <button onClick={() => router.push('/scriptr')} className="mt-4 text-blue-600 dark:text-blue-400 hover:underline">View all scripts...</button>
+            {scripts.length > 0 && (
+              <button onClick={() => router.push('/scriptr')} className="mt-4 text-blue-600 dark:text-blue-400 hover:underline">View all scripts...</button>
             )}
           </div>
 
@@ -370,7 +370,7 @@ export default function HubPage() {
               <p className="text-black dark:text-white">No questionnaires found.</p>
             )}
             {questionnaires.length > 0 && (
-                <button onClick={() => router.push('/qsnair')} className="mt-4 text-blue-600 dark:text-blue-400 hover:underline">View all questionnaires...</button>
+              <button onClick={() => router.push('/qsnair')} className="mt-4 text-blue-600 dark:text-blue-400 hover:underline">View all questionnaires...</button>
             )}
           </div>
         </div>

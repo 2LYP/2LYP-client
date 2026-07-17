@@ -11,13 +11,13 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     console.log('Initial theme detection:', {
       savedTheme,
       systemPrefersDark,
       systemTheme: systemPrefersDark ? 'dark' : 'light'
     });
-    
+
     if (savedTheme) {
       setTheme(savedTheme);
       setIsManualOverride(true);
@@ -32,9 +32,9 @@ export function ThemeProvider({ children }) {
   // Listen for system theme changes (only if not manually overridden)
   useEffect(() => {
     if (isManualOverride) return; // Don't listen if user has manually set theme
-    
+
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     const handleSystemThemeChange = (e) => {
       console.log('System theme changed:', e.matches ? 'dark' : 'light');
       setTheme(e.matches ? 'dark' : 'light');
@@ -47,7 +47,7 @@ export function ThemeProvider({ children }) {
       // Fallback for older browsers
       mediaQuery.addListener(handleSystemThemeChange);
     }
-    
+
     return () => {
       if (mediaQuery.removeEventListener) {
         mediaQuery.removeEventListener('change', handleSystemThemeChange);
@@ -62,6 +62,13 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     document.body.classList.remove('light-mode', 'dark-mode');
     document.body.classList.add(theme === 'dark' ? 'dark-mode' : 'light-mode');
+    
+    // Sync with Tailwind CSS selector-based dark mode class on document element
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     
     // Save to localStorage if it's a manual override
     if (isManualOverride) {
@@ -95,13 +102,13 @@ export function ThemeProvider({ children }) {
   const isDarkMode = theme === 'dark';
 
   return (
-    <ThemeContext.Provider value={{ 
-      theme, 
-      setTheme, 
-      toggleTheme, 
-      isDarkMode, 
+    <ThemeContext.Provider value={{
+      theme,
+      setTheme,
+      toggleTheme,
+      isDarkMode,
       isManualOverride,
-      resetToSystemTheme 
+      resetToSystemTheme
     }}>
       {children}
     </ThemeContext.Provider>

@@ -13,6 +13,7 @@ import { useState, useEffect, useCallback, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/ui/Button";
 import WalletIntegrationBox from "@/components/home/WalletIntegrationBox";
+import Footer from "@/components/Footer";
 
 import {
   useTotalSupply,
@@ -26,7 +27,7 @@ import {
   useUserBalance,
 } from "../hooks/useOverviewStats";
 
-import {formatEther} from 'viem';
+import { formatEther } from 'viem';
 
 
 // Lazy load non-essential components
@@ -105,10 +106,9 @@ export default function Home() {
       {/* Token Section with Coin in Middle */}
       <div className="relative w-full mx-auto mb-8 flex justify-center items-center gap-8 px-8">
         {/* Left Token Box */}
-        <div 
-          className={`w-1/3 bg-purple-600 dark:bg-purple-800 rounded-xl border-4 border-black p-6 transition-all duration-1000 ${
-            tokenBoxReveal > 0 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
-          }`}
+        <div
+          className={`w-1/3 bg-purple-600 dark:bg-purple-800 rounded-xl border-4 border-black p-6 transition-all duration-1000 ${tokenBoxReveal > 0 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
+            }`}
         >
           <h2 className="text-2xl font-bold mb-4 text-white">Tokenomics</h2>
           <div className="space-y-4 text-white">
@@ -128,18 +128,19 @@ export default function Home() {
         </div>
 
         {/* Coin in Center */}
-        {/* <div className="z-10">
+        <div className="z-10">
           <Suspense fallback={
             <div className="w-48 h-48 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
           }>
             <Coin scrollProgress={scrollProgress} showTokenBox={tokenBoxReveal > 0} />
           </Suspense>
-        </div> */}
+        </div>
 
         {/* Right Token Box */}
         <WalletIntegrationBox tokenBoxReveal={tokenBoxReveal} />
       </div>
       <br /><br />
+      <Footer />
     </main>
   );
 }

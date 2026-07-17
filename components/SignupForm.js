@@ -235,11 +235,10 @@ export default function SignupForm({
             type="password"
             value={password}
             onChange={onPasswordChange}
-            className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
-              passwordErrors.length > 0
+            className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${passwordErrors.length > 0
                 ? "border-red-300 focus:ring-red-500"
                 : "border-gray-300 focus:ring-blue-500"
-            }`}
+              }`}
             required
             placeholder="Password"
             disabled={isSubmitting}
@@ -261,11 +260,10 @@ export default function SignupForm({
             type="password"
             value={confirmPassword}
             onChange={onConfirmPasswordChange}
-            className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
-              confirmPassword && password !== confirmPassword
+            className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${confirmPassword && password !== confirmPassword
                 ? "border-red-300 focus:ring-red-500"
                 : "border-gray-300 focus:ring-blue-500"
-            }`}
+              }`}
             required
             placeholder="Confirm Password"
             disabled={isSubmitting}

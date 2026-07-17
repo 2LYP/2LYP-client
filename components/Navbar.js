@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-white dark:bg-black p-4 shadow-md transition-all duration-1000 z-20 ${isScrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+      className={`fixed top-0 left-0 w-full bg-white/20 dark:backdrop-blur-l dark:bg-black/20 py-2 px-4 shadow-sm transition-all duration-1000 z-20 ${isScrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
     >
       <div className="flex justify-between items-center gap-4 md:gap-8 max-w-7xl mx-auto">
@@ -50,7 +50,7 @@ export default function Navbar() {
             placeholder="Search..."
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="p-2 pr-10 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white w-full"
+            className="py-1.5 px-3 pr-10 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white w-full text-sm outline-none"
           />
           <button
             type="button"
@@ -89,14 +89,19 @@ export default function Navbar() {
         </div>
 
         {/* Nav buttons and Profile Icon */}
-  <div className="flex items-center gap-6 pl-4 md:pl-8">
+        <div className="flex items-center gap-6 pl-4 md:pl-8">
           {SECTION_DATA.map((section, i) => (
             <Button
               key={i}
               style={{
                 "--button-bg-light": section.buttonColor,
-                fontSize: "22px",
-                height: "60px"
+                fontSize: "15px",
+                height: "36px",
+                padding: "0 16px",
+                "--border-radius-tl": "16px",
+                "--border-radius-tr": "16px",
+                "--border-radius-bl": "8px",
+                "--border-radius-br": "8px",
               }}
               onClick={() => section.title === "Products" && router.push("/products")}
             >
@@ -117,11 +122,13 @@ export default function Navbar() {
               right: "150px",
               left: "auto",           // starts after hub button naturally
               width: "100px",         // enough to stretch from hub btn to pic
-              height: "45px",         // +2px taller
+              height: "28px",         // reduced height
               background: "#FFFF00",  // yellow inside
               border: "2px solid #FFFF00",
               overflow: "hidden",
-              zIndex: "-1"
+              zIndex: "-1",
+              top: "50%",
+              transform: "translateY(-50%)"
             }}>
               <div style={{
                 width: "200%",
@@ -133,11 +140,11 @@ export default function Navbar() {
             </div>
           )}
           {user && (
-            <div onClick={() => router.push("/hub")} className="cursor-pointer ml-3 w-15 h-15 rounded-full border-3 border-black bg-gray-200 overflow-hidden shadow-lg flex items-center justify-center">
+            <div onClick={() => router.push("/hub")} className="cursor-pointer ml-3 w-10 h-10 rounded-full border-2 border-black bg-gray-200 overflow-hidden shadow-lg flex items-center justify-center">
               <ProfilePicture
                 src={user.profilePic}
                 alt="Profile"
-                size={50}
+                size={36}
                 className="w-full h-full object-cover"
                 title={user.name}
               />
@@ -146,16 +153,40 @@ export default function Navbar() {
           {/* Wallet Connect Button + Balance */}
           <div className="flex items-center gap-3">
             {navbarBalanceStr && (
-              <div className="hidden sm:block text-sm text-muted-foreground">
+              <div className="hidden sm:block text-sm text-gray-500 dark:text-gray-400">
                 <div className="font-medium">{navbarBalanceStr}</div>
               </div>
             )}
             {isConnected ? (
-              <Button variant="outline" size="sm" onClick={() => disconnect()}>
+              <Button
+                style={{
+                  "--button-bg-light": "#e6e6e6",
+                  fontSize: "14px",
+                  height: "36px",
+                  padding: "0 12px",
+                  "--border-radius-tl": "16px",
+                  "--border-radius-tr": "16px",
+                  "--border-radius-bl": "8px",
+                  "--border-radius-br": "8px",
+                }}
+                onClick={() => disconnect()}
+              >
                 {shortAddress}
               </Button>
             ) : (
-              <Button variant="default" size="sm" onClick={() => connect({ connector: injected() })}>
+              <Button
+                style={{
+                  "--button-bg-light": "#00ffff",
+                  fontSize: "14px",
+                  height: "36px",
+                  padding: "0 12px",
+                  "--border-radius-tl": "16px",
+                  "--border-radius-tr": "16px",
+                  "--border-radius-bl": "8px",
+                  "--border-radius-br": "8px",
+                }}
+                onClick={() => connect({ connector: injected() })}
+              >
                 Connect Wallet
               </Button>
             )}

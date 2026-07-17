@@ -121,10 +121,10 @@ export default function NotFound() {
               </span>
             </h1>
             <h2 className="text-xl font-bold mb-4 text-black dark:text-white">
-              Oops, you've wandered off the grid.
+              Oops, you&apos;ve wandered off the grid.
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-              The page you're looking for doesn't exist or has moved. Click Home to create a new path!
+              The page you&apos;re looking for doesn&apos;t exist or has moved. Click Home to create a new path!
             </p>
           </div>
           

@@ -1,5 +1,9 @@
 /* global.css */
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@source "../components/**/*.{js,jsx}";
+@source "../contexts/**/*.{js,jsx}";
+@source "../app/**/*.{js,jsx}";
 
 ::-webkit-scrollbar {
   display: none;
@@ -135,13 +139,7 @@ body {
   cursor: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: var(--background-color, #ffffff);
-  gap: 20px;
 }
 
 .logo {

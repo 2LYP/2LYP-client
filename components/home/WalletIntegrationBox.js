@@ -97,19 +97,19 @@ export default function WalletIntegrationBox({ tokenBoxReveal }) {
               {addStatus === 'pending' ? 'Adding…' : addStatus === 'success' ? 'Added ✔' : 'Add to MetaMask'}
             </Button>
           )}
-           {isConnected ? (
+          {isConnected ? (
             <Button
               className="w-full typewriter"
               style={{ "--button-bg-light": "rgb(128 0 128)", fontSize: "18px", height: "50px" }}
-            
+
               onClick={() => disconnect()}>
               {shortAddress}
             </Button>
           ) : (
             <Button
-            className="w-full typewriter"
-            style={{ "--button-bg-light": "rgb(128 0 128)", fontSize: "18px", height: "50px" }}
-            onClick={() => connect({ connector: injected() })}
+              className="w-full typewriter"
+              style={{ "--button-bg-light": "rgb(128 0 128)", fontSize: "18px", height: "50px" }}
+              onClick={() => connect({ connector: injected() })}
             >
               Connect Wallet
             </Button>

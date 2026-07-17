@@ -1,4 +1,4 @@
-// client\src\utils\api.js
+// client\utils\api.js
 import axios from "axios";
 
 export const getCsrfToken = async () => {

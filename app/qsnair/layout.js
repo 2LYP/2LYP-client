@@ -1,4 +1,4 @@
-// client\src\app\qsnair\layout.js
+// client\app\qsnair\layout.js
 "use client";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";

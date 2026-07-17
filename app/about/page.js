@@ -2,6 +2,8 @@
 import Background from "@/components/ui/Background";
 import Lypcursor from "@/components/ui/Lypcursor";
 import RouteLoadingBar from "@/components/ui/RouteLoadingBar";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function AboutUs() {
   return (
@@ -11,18 +13,7 @@ export default function AboutUs() {
       <Background />
       <br /><br /><br /><br /><br /><br />
       {/* Fixed Navbar */}
-      <div className="fixed top-0 left-0 w-full bg-white dark:bg-black p-4 shadow-md z-20">
-        <div className="flex justify-between items-center max-w-6xl mx-auto">
-          <div className="text-xl font-bold">2LYP Computations</div>
-          <div className="flex gap-4">
-            {["Products", "Services", "Learn", "Hub"].map((btn, index) => (
-              <button key={index} className="typewriter" style={{ fontSize: "22px", height: "60px" }}>
-                {btn}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Navbar />
 
       {/* About Us Section */}
       <section className="relative w-3/4 mx-auto flex flex-col items-center pt-7 pb-15 bg-[#ffff00] dark:bg-gray-800 rounded-xl border-4 border-black mt-20">
@@ -57,6 +48,7 @@ export default function AboutUs() {
           <p className="mt-4 text-gray-700 dark:text-gray-300 text-sm">Click a certificate to view the PDF.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

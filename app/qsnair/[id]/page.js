@@ -16,236 +16,236 @@ import FlipCard from "@/components/scriptr/FlipCard";
 // Constants
 const animatedTitle = "Q.S.N.Ai.R.";
 const QUESTION_SETS = {
-  21: ["What is character's full name?","What is {name}'s gender?","What is {name}'s favorite color?","What is {name}'s age?","What is {name}'s favorite beverage?",
-      "If {name} had to run an errand, which vehicle would they pick?","Is {name} more of a morning person or a night owl?",
-      "What kind of music does {name} enjoy?","What brand of clothes does {name} like?",
-      "What is {name}'s favorite genre of entertainment?","Does {name} enjoy being indoors or outdoors more?",
-      "What is {name}'s favorite season?",
-      "Does {name} like sweet or savory snacks?",
-      "How often does {name} usually spend time in gym?",
-      "What’s {name}'s birthplace?",
-      "Does {name} prefer dogs or cats?",
-      "Is {name} more introverted or extroverted?",
-      "What’s {name}'s ethnicity?",
-      "Does {name} believe in astrology?",
-      "Does {name} prefer city life or village living?",
-      "What’s a hobby {name} enjoys?",
-      "On a scale of 1 to 10, how much does {name} like jilabi sweets?",
-      "If {name} could have any superpower, what would it be?"],
+  21: ["What is character's full name?", "What is {name}'s gender?", "What is {name}'s favorite color?", "What is {name}'s age?", "What is {name}'s favorite beverage?",
+    "If {name} had to run an errand, which vehicle would they pick?", "Is {name} more of a morning person or a night owl?",
+    "What kind of music does {name} enjoy?", "What brand of clothes does {name} like?",
+    "What is {name}'s favorite genre of entertainment?", "Does {name} enjoy being indoors or outdoors more?",
+    "What is {name}'s favorite season?",
+    "Does {name} like sweet or savory snacks?",
+    "How often does {name} usually spend time in gym?",
+    "What’s {name}'s birthplace?",
+    "Does {name} prefer dogs or cats?",
+    "Is {name} more introverted or extroverted?",
+    "What’s {name}'s ethnicity?",
+    "Does {name} believe in astrology?",
+    "Does {name} prefer city life or village living?",
+    "What’s a hobby {name} enjoys?",
+    "On a scale of 1 to 10, how much does {name} like jilabi sweets?",
+    "If {name} could have any superpower, what would it be?"],
   180: [
-      "What is character's full name?",
-      "Does {name} have any nicknames, and why?",
-      "What is {name}'s age?",
-      "What is {name}'s zodiac sign?",
-      "What is {name}'s blood type?",
-      "What is {name}'s gender identity?",
-      "What are {name}'s pronouns?",
-      "What is {name}'s sexual orientation?",
-      "Where was {name} born?",
-      "Where does {name} currently live?",
-      "Has {name} ever moved? If so, why?",
-      "What languages does {name} speak?",
-      "Does {name} have a birthmark or other identifying physical trait?",
-      "What is {name}'s dominant hand?",
-      "What’s {name}'s favorite type of weather?",
-      "What is {name}'s favorite season?",
-      "Does {name} have any allergies?",
-      "What time of day is {name} most active?",
-      "Does {name} believe in astrology?",
-      "How would {name} introduce themselves in one sentence?",
-      "How tall is {name}?",
-      "How much does {name} weigh?",
-      "What is {name}'s body type?",
-      "What is {name}'s skin tone?",
-      "Does {name} have freckles, moles, or scars?",
-      "What color are {name}'s eyes?",
-      "Does {name} wear glasses or contacts?",
-      "What is {name}'s natural hair color?",
-      "Does {name} dye their hair?",
-      "How does {name} usually style their hair?",
-      "Does {name} have piercings or tattoos?",
-      "What kind of clothing does {name} prefer to wear?",
-      "Does {name} have a signature accessory or piece of clothing?",
-      "What’s {name}'s favorite color?",
-      "What’s {name}'s least favorite color?",
-      "What’s {name}'s fashion style?",
-      "What’s {name}'s favorite outfit?",
-      "Does {name} prefer casual or formal wear?",
-      "What’s {name}'s favorite kind of shoes?",
-      "Does {name} wear makeup?",
-      "How does {name} take care of their appearance?",
-      "Does {name} have a preferred fragrance or cologne?",
-      "What’s {name}'s voice like?",
-      "How expressive is {name} with their face?",
-      "How does {name} carry themselves?",
-      "Does {name} have any nervous tics or habits?",
-      "What’s {name}'s favorite food?",
-      "What’s a food {name} dislikes?",
-      "What’s {name}'s favorite drink?",
-      "Does {name} prefer tea or coffee?",
-      "What’s {name}'s favorite dessert?",
-      "What’s {name}'s favorite fruit?",
-      "What’s {name}'s favorite vegetable?",
-      "Does {name} like spicy food?",
-      "Does {name} cook?",
-      "What’s {name}'s favorite meal of the day?",
-      "What’s {name}'s comfort food?",
-      "Is {name} a picky eater?",
-      "Does {name} have a favorite restaurant or café?",
-      "Does {name} prefer home-cooked meals or eating out?",
-      "Does {name} have any dietary restrictions?",
-      "Does {name} like trying new foods?",
-      "What’s a food {name} wants to try?",
-      "What’s {name}'s dream meal?",
-      "What kind of home does {name} live in?",
-      "What does {name}'s bedroom look like?",
-      "Is {name} a neat or messy person?",
-      "What kind of decor does {name} like?",
-      "Does {name} prefer a minimalist or cluttered space?",
-      "Does {name} have any plants or pets?",
-      "What’s {name}'s favorite piece of furniture?",
-      "Does {name} like scented candles or incense?",
-      "Does {name} collect anything?",
-      "What kind of books does {name} like?",
-      "Does {name} keep a journal or diary?",
-      "Does {name} like writing or drawing?",
-      "Does {name} have a favorite movie?",
-      "What’s {name}'s favorite TV show?",
-      "Does {name} listen to podcasts?",
-      "What kind of music does {name} like?",
-      "Does {name} play any musical instruments?",
-      "What’s {name}'s favorite song?",
-      "What’s {name}'s favorite hobby?",
-      "Is {name} good at sports?",
-      "Does {name} like video games?",
-      "What’s {name}'s favorite board game?",
-      "Does {name} like puzzles?",
-      "What’s {name}'s favorite holiday?",
-      "What traditions does {name} follow?",
-      "Does {name} celebrate their birthday?",
-      "What’s {name}'s favorite childhood memory?",
-      "What was {name}'s favorite toy as a kid?",
-      "Was {name} a good student?",
-      "What subject did {name} enjoy the most?",
-      "What’s something {name} wants to learn?",
-      "What’s {name}'s dream job?",
-      "Does {name} like working alone or in a team?",
-      "What motivates {name}?",
-      "What’s {name}'s biggest fear?",
-      "What’s {name}'s greatest strength?",
-      "What’s {name}'s greatest weakness?",
-      "On a scale of 1 to 10, how much does {name} love jilabi sweets?",
-      "What is {name}'s favorite Indian festival or tradition?"
-    ],
-    369: [
-      "What is your full name?",
-      "Does {name} have any nicknames, and why?",
-      "What is {name}'s age?",
-      "What is {name}'s zodiac sign?",
-      "What is {name}'s blood type?",
-      "What is {name}'s gender identity?",
-      "What are {name}'s pronouns?",
-      "What is {name}'s sexual orientation?",
-      "Where was {name} born?",
-      "Where does {name} currently live?",
-      "Has {name} ever moved? If so, why?",
-      "What languages does {name} speak?",
-      "Does {name} have a birthmark or other identifying physical trait?",
-      "What is {name}'s dominant hand?",
-      "What’s {name}'s favorite type of weather?",
-      "What is {name}'s favorite season?",
-      "Does {name} have any allergies?",
-      "What time of day is {name} most active?",
-      "Does {name} believe in astrology?",
-      "How would {name} introduce themselves in one sentence?",
-      // Appearance
-      "How tall is {name}?",
-      "How much does {name} weigh?",
-      "What is {name}'s body type?",
-      "What is {name}'s skin tone?",
-      "Does {name} have freckles, moles, or scars?",
-      "What color are {name}'s eyes?",
-      "Does {name} wear glasses or contacts?",
-      "What is {name}'s natural hair color?",
-      "Does {name} dye their hair?",
-      "How does {name} usually style their hair?",
-      "Does {name} have piercings or tattoos?",
-      "What kind of clothing does {name} prefer to wear?",
-      "Does {name} have a signature accessory or piece of clothing?",
-      "What’s {name}'s favorite color?",
-      "What’s {name}'s least favorite color?",
-      "What’s {name}'s fashion style?",
-      "What’s {name}'s favorite outfit?",
-      "Does {name} prefer casual or formal wear?",
-      "What’s {name}'s favorite kind of shoes?",
-      "Does {name} wear makeup?",
-      "How does {name} take care of their appearance?",
-      "Does {name} have a preferred fragrance or cologne?",
-      "What’s {name}'s voice like?",
-      "How expressive is {name} with their face?",
-      "How does {name} carry themselves?",
-      "Does {name} have any nervous tics or habits?",
-      // Preferences & Daily Life
-      "What’s {name}'s favorite food?",
-      "What’s a food {name} dislikes?",
-      "What’s {name}'s favorite drink?",
-      "Does {name} prefer tea or coffee?",
-      "What’s {name}'s favorite dessert?",
-      "What’s {name}'s favorite fruit?",
-      "What’s {name}'s favorite vegetable?",
-      "Does {name} like spicy food?",
-      "Does {name} cook?",
-      "What’s {name}'s favorite meal of the day?",
-      "What’s {name}'s comfort food?",
-      "Is {name} a picky eater?",
-      "Does {name} have a favorite restaurant or café?",
-      "Does {name} prefer home-cooked meals or eating out?",
-      "Does {name} have any dietary restrictions?",
-      "Does {name} like trying new foods?",
-      "What’s a food {name} wants to try?",
-      "What’s {name}'s dream meal?",
-      "What kind of home does {name} live in?",
-      "What does {name}'s bedroom look like?",
-      "Is {name} a neat or messy person?",
-      "What kind of decor does {name} like?",
-      "Does {name} prefer a minimalist or cluttered space?",
-      "Does {name} have any plants or pets?",
-      "What’s {name}'s favorite piece of furniture?",
-      "Does {name} like scented candles or incense?",
-      "Does {name} collect anything?",
-      "What kind of books does {name} like?",
-      "Does {name} keep a journal or diary?",
-      "Does {name} like writing or drawing?",
-      "Does {name} have a favorite movie?",
-      "What’s {name}'s favorite TV show?",
-      "Does {name} listen to podcasts?",
-      "What kind of music does {name} like?",
-      "Does {name} play any musical instruments?",
-      "What’s {name}'s favorite song?",
-      "What’s {name}'s favorite hobby?",
-      "Is {name} good at sports?",
-      "Does {name} like video games?",
-      "What’s {name}'s favorite board game?",
-      "Does {name} like puzzles?",
-      "What’s {name}'s favorite holiday?",
-      "What traditions does {name} follow?",
-      "Does {name} celebrate their birthday?",
-      "What’s {name}'s favorite childhood memory?",
-      "What was {name}'s favorite toy as a kid?",
-      "Was {name} a good student?",
-      "What subject did {name} enjoy the most?",
-      "What’s something {name} wants to learn?",
-      "What’s {name}'s dream job?",
-      "Does {name} like working alone or in a team?",
-      "What motivates {name}?",
-      "What’s {name}'s biggest fear?",
-      "What’s {name}'s greatest strength?",
-      "What’s {name}'s greatest weakness?",
-      "On a scale of 1 to 10, how much does {name} love jilabi sweets?",
-      "What is {name}'s favorite Indian festival or tradition?",
-      "Which aspect of Indian heritage does {name} connect with the most?"
-    ]
-  };
+    "What is character's full name?",
+    "Does {name} have any nicknames, and why?",
+    "What is {name}'s age?",
+    "What is {name}'s zodiac sign?",
+    "What is {name}'s blood type?",
+    "What is {name}'s gender identity?",
+    "What are {name}'s pronouns?",
+    "What is {name}'s sexual orientation?",
+    "Where was {name} born?",
+    "Where does {name} currently live?",
+    "Has {name} ever moved? If so, why?",
+    "What languages does {name} speak?",
+    "Does {name} have a birthmark or other identifying physical trait?",
+    "What is {name}'s dominant hand?",
+    "What’s {name}'s favorite type of weather?",
+    "What is {name}'s favorite season?",
+    "Does {name} have any allergies?",
+    "What time of day is {name} most active?",
+    "Does {name} believe in astrology?",
+    "How would {name} introduce themselves in one sentence?",
+    "How tall is {name}?",
+    "How much does {name} weigh?",
+    "What is {name}'s body type?",
+    "What is {name}'s skin tone?",
+    "Does {name} have freckles, moles, or scars?",
+    "What color are {name}'s eyes?",
+    "Does {name} wear glasses or contacts?",
+    "What is {name}'s natural hair color?",
+    "Does {name} dye their hair?",
+    "How does {name} usually style their hair?",
+    "Does {name} have piercings or tattoos?",
+    "What kind of clothing does {name} prefer to wear?",
+    "Does {name} have a signature accessory or piece of clothing?",
+    "What’s {name}'s favorite color?",
+    "What’s {name}'s least favorite color?",
+    "What’s {name}'s fashion style?",
+    "What’s {name}'s favorite outfit?",
+    "Does {name} prefer casual or formal wear?",
+    "What’s {name}'s favorite kind of shoes?",
+    "Does {name} wear makeup?",
+    "How does {name} take care of their appearance?",
+    "Does {name} have a preferred fragrance or cologne?",
+    "What’s {name}'s voice like?",
+    "How expressive is {name} with their face?",
+    "How does {name} carry themselves?",
+    "Does {name} have any nervous tics or habits?",
+    "What’s {name}'s favorite food?",
+    "What’s a food {name} dislikes?",
+    "What’s {name}'s favorite drink?",
+    "Does {name} prefer tea or coffee?",
+    "What’s {name}'s favorite dessert?",
+    "What’s {name}'s favorite fruit?",
+    "What’s {name}'s favorite vegetable?",
+    "Does {name} like spicy food?",
+    "Does {name} cook?",
+    "What’s {name}'s favorite meal of the day?",
+    "What’s {name}'s comfort food?",
+    "Is {name} a picky eater?",
+    "Does {name} have a favorite restaurant or café?",
+    "Does {name} prefer home-cooked meals or eating out?",
+    "Does {name} have any dietary restrictions?",
+    "Does {name} like trying new foods?",
+    "What’s a food {name} wants to try?",
+    "What’s {name}'s dream meal?",
+    "What kind of home does {name} live in?",
+    "What does {name}'s bedroom look like?",
+    "Is {name} a neat or messy person?",
+    "What kind of decor does {name} like?",
+    "Does {name} prefer a minimalist or cluttered space?",
+    "Does {name} have any plants or pets?",
+    "What’s {name}'s favorite piece of furniture?",
+    "Does {name} like scented candles or incense?",
+    "Does {name} collect anything?",
+    "What kind of books does {name} like?",
+    "Does {name} keep a journal or diary?",
+    "Does {name} like writing or drawing?",
+    "Does {name} have a favorite movie?",
+    "What’s {name}'s favorite TV show?",
+    "Does {name} listen to podcasts?",
+    "What kind of music does {name} like?",
+    "Does {name} play any musical instruments?",
+    "What’s {name}'s favorite song?",
+    "What’s {name}'s favorite hobby?",
+    "Is {name} good at sports?",
+    "Does {name} like video games?",
+    "What’s {name}'s favorite board game?",
+    "Does {name} like puzzles?",
+    "What’s {name}'s favorite holiday?",
+    "What traditions does {name} follow?",
+    "Does {name} celebrate their birthday?",
+    "What’s {name}'s favorite childhood memory?",
+    "What was {name}'s favorite toy as a kid?",
+    "Was {name} a good student?",
+    "What subject did {name} enjoy the most?",
+    "What’s something {name} wants to learn?",
+    "What’s {name}'s dream job?",
+    "Does {name} like working alone or in a team?",
+    "What motivates {name}?",
+    "What’s {name}'s biggest fear?",
+    "What’s {name}'s greatest strength?",
+    "What’s {name}'s greatest weakness?",
+    "On a scale of 1 to 10, how much does {name} love jilabi sweets?",
+    "What is {name}'s favorite Indian festival or tradition?"
+  ],
+  369: [
+    "What is your full name?",
+    "Does {name} have any nicknames, and why?",
+    "What is {name}'s age?",
+    "What is {name}'s zodiac sign?",
+    "What is {name}'s blood type?",
+    "What is {name}'s gender identity?",
+    "What are {name}'s pronouns?",
+    "What is {name}'s sexual orientation?",
+    "Where was {name} born?",
+    "Where does {name} currently live?",
+    "Has {name} ever moved? If so, why?",
+    "What languages does {name} speak?",
+    "Does {name} have a birthmark or other identifying physical trait?",
+    "What is {name}'s dominant hand?",
+    "What’s {name}'s favorite type of weather?",
+    "What is {name}'s favorite season?",
+    "Does {name} have any allergies?",
+    "What time of day is {name} most active?",
+    "Does {name} believe in astrology?",
+    "How would {name} introduce themselves in one sentence?",
+    // Appearance
+    "How tall is {name}?",
+    "How much does {name} weigh?",
+    "What is {name}'s body type?",
+    "What is {name}'s skin tone?",
+    "Does {name} have freckles, moles, or scars?",
+    "What color are {name}'s eyes?",
+    "Does {name} wear glasses or contacts?",
+    "What is {name}'s natural hair color?",
+    "Does {name} dye their hair?",
+    "How does {name} usually style their hair?",
+    "Does {name} have piercings or tattoos?",
+    "What kind of clothing does {name} prefer to wear?",
+    "Does {name} have a signature accessory or piece of clothing?",
+    "What’s {name}'s favorite color?",
+    "What’s {name}'s least favorite color?",
+    "What’s {name}'s fashion style?",
+    "What’s {name}'s favorite outfit?",
+    "Does {name} prefer casual or formal wear?",
+    "What’s {name}'s favorite kind of shoes?",
+    "Does {name} wear makeup?",
+    "How does {name} take care of their appearance?",
+    "Does {name} have a preferred fragrance or cologne?",
+    "What’s {name}'s voice like?",
+    "How expressive is {name} with their face?",
+    "How does {name} carry themselves?",
+    "Does {name} have any nervous tics or habits?",
+    // Preferences & Daily Life
+    "What’s {name}'s favorite food?",
+    "What’s a food {name} dislikes?",
+    "What’s {name}'s favorite drink?",
+    "Does {name} prefer tea or coffee?",
+    "What’s {name}'s favorite dessert?",
+    "What’s {name}'s favorite fruit?",
+    "What’s {name}'s favorite vegetable?",
+    "Does {name} like spicy food?",
+    "Does {name} cook?",
+    "What’s {name}'s favorite meal of the day?",
+    "What’s {name}'s comfort food?",
+    "Is {name} a picky eater?",
+    "Does {name} have a favorite restaurant or café?",
+    "Does {name} prefer home-cooked meals or eating out?",
+    "Does {name} have any dietary restrictions?",
+    "Does {name} like trying new foods?",
+    "What’s a food {name} wants to try?",
+    "What’s {name}'s dream meal?",
+    "What kind of home does {name} live in?",
+    "What does {name}'s bedroom look like?",
+    "Is {name} a neat or messy person?",
+    "What kind of decor does {name} like?",
+    "Does {name} prefer a minimalist or cluttered space?",
+    "Does {name} have any plants or pets?",
+    "What’s {name}'s favorite piece of furniture?",
+    "Does {name} like scented candles or incense?",
+    "Does {name} collect anything?",
+    "What kind of books does {name} like?",
+    "Does {name} keep a journal or diary?",
+    "Does {name} like writing or drawing?",
+    "Does {name} have a favorite movie?",
+    "What’s {name}'s favorite TV show?",
+    "Does {name} listen to podcasts?",
+    "What kind of music does {name} like?",
+    "Does {name} play any musical instruments?",
+    "What’s {name}'s favorite song?",
+    "What’s {name}'s favorite hobby?",
+    "Is {name} good at sports?",
+    "Does {name} like video games?",
+    "What’s {name}'s favorite board game?",
+    "Does {name} like puzzles?",
+    "What’s {name}'s favorite holiday?",
+    "What traditions does {name} follow?",
+    "Does {name} celebrate their birthday?",
+    "What’s {name}'s favorite childhood memory?",
+    "What was {name}'s favorite toy as a kid?",
+    "Was {name} a good student?",
+    "What subject did {name} enjoy the most?",
+    "What’s something {name} wants to learn?",
+    "What’s {name}'s dream job?",
+    "Does {name} like working alone or in a team?",
+    "What motivates {name}?",
+    "What’s {name}'s biggest fear?",
+    "What’s {name}'s greatest strength?",
+    "What’s {name}'s greatest weakness?",
+    "On a scale of 1 to 10, how much does {name} love jilabi sweets?",
+    "What is {name}'s favorite Indian festival or tradition?",
+    "Which aspect of Indian heritage does {name} connect with the most?"
+  ]
+};
 
 export default function QuestionnairePage() {
   const router = useRouter();
@@ -318,11 +318,11 @@ export default function QuestionnairePage() {
         const { questionnaire, character, answers: savedAnswers } = response.data;
 
         if (!questionnaire) throw new Error("Questionnaire session not found.");
-        
+
         setSelectedSet(questionnaire.questionSetType);
         setAnswers(savedAnswers || []);
         if (savedAnswers && savedAnswers.length > 0) {
-            setCharacterName(savedAnswers[0]);
+          setCharacterName(savedAnswers[0]);
         }
 
 
@@ -348,17 +348,17 @@ export default function QuestionnairePage() {
     fetchSessionData();
   }, [questionnaireId, user, isAuthLoading, router]);
 
-    // Socket connection setup
-    useEffect(() => {
-        const s = socketIOClient(process.env.NEXT_PUBLIC_API_URL, {
-          withCredentials: true,
-          transports: ["websocket"],
-        });
-        setSocket(s);
-        return () => {
-          s.disconnect();
-        };
-      }, []);
+  // Socket connection setup
+  useEffect(() => {
+    const s = socketIOClient(process.env.NEXT_PUBLIC_API_URL, {
+      withCredentials: true,
+      transports: ["websocket"],
+    });
+    setSocket(s);
+    return () => {
+      s.disconnect();
+    };
+  }, []);
 
   // --- SIDEBAR DATA ---
   useEffect(() => {
@@ -393,7 +393,7 @@ export default function QuestionnairePage() {
       console.error('Error loading characters:', error);
     }
   };
-  
+
   const deleteCharacter = async (characterId) => {
     if (!window.confirm("Are you sure? This cannot be undone.")) return;
     try {
@@ -408,23 +408,23 @@ export default function QuestionnairePage() {
 
   // --- CORE LOGIC ---
   const submitAnswer = async () => {
-    if (!answer.trim()) { setError("Please enter an answer"); return; } 
-    
+    if (!answer.trim()) { setError("Please enter an answer"); return; }
+
     const newAnswers = [...answers];
     newAnswers[questionIndex] = answer;
     setAnswers(newAnswers);
 
     if (questionIndex === 0) setCharacterName(answer);
-    
-    setAnswer(""); 
+
+    setAnswer("");
     setError("");
 
     if (questionIndex + 1 < QUESTION_SETS[selectedSet]?.length) {
       setQuestionIndex(questionIndex + 1);
     } else {
-      setIsLoading(true); 
+      setIsLoading(true);
       setQuestionIndex(null);
-      
+
       setTimeout(async () => {
         try {
           const promptResponse = await axiosInstance.post('/api/ai/generate-prompt', { answers: newAnswers });
@@ -440,10 +440,10 @@ export default function QuestionnairePage() {
     }
 
     try {
-        await axiosInstance.put(`/api/questionnaires/${questionnaireId}`, { answers: newAnswers });
+      await axiosInstance.put(`/api/questionnaires/${questionnaireId}`, { answers: newAnswers });
     } catch (err) {
-        console.error("Failed to save answer:", err);
-        toast.error("Failed to save progress.", { autoClose: 2000 });
+      console.error("Failed to save answer:", err);
+      toast.error("Failed to save progress.", { autoClose: 2000 });
     }
   };
 
@@ -466,14 +466,14 @@ export default function QuestionnairePage() {
 
   const handleSaveCharacter = async (imageUrlToSave, promptToSave) => {
     if (!characterName || !imageUrlToSave || !promptToSave) {
-        toast.error("Character data is not complete yet.");
-        return;
+      toast.error("Character data is not complete yet.");
+      return;
     };
     setIsLoading(true);
     try {
       await axiosInstance.put(`/api/questionnaires/${questionnaireId}/character`, {
-        name: characterName, 
-        imageUrl: imageUrlToSave, 
+        name: characterName,
+        imageUrl: imageUrlToSave,
         prompt: promptToSave,
       });
       toast.success(`Character "${characterName}" has been saved!`);
@@ -505,7 +505,7 @@ export default function QuestionnairePage() {
   const getCurrentQuestion = useCallback(() => {
     if (questionIndex === null || !selectedSet) return "Choose a question set to start.";
     let currentQuestion = QUESTION_SETS[selectedSet]?.[questionIndex] || "";
-    const nameAnswer = answers[0]; 
+    const nameAnswer = answers[0];
     if (nameAnswer) currentQuestion = currentQuestion.replace(/{name}/g, nameAnswer);
     return currentQuestion;
   }, [questionIndex, selectedSet, answers]);
@@ -582,9 +582,9 @@ export default function QuestionnairePage() {
                 <div className="absolute w-3 h-3 bg-black rounded-full top-4 left-4"></div><div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div><div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div><div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
                 <Image src={imageUrl} alt={characterName || "Generated Character"} width={384} height={384} className="rounded-lg shadow-md w-96 h-96 object-cover mb-6" />
                 {isViewMode ? (
-                    <button onClick={() => router.push('/qsnair/dashboard')} className="typewriter mb-4" style={{ fontSize: "22px", height: "60px" }}>Dashboard</button>
+                  <button onClick={() => router.push('/qsnair/dashboard')} className="typewriter mb-4" style={{ fontSize: "22px", height: "60px" }}>Dashboard</button>
                 ) : (
-                    <button onClick={() => handleSaveCharacter(imageUrl, prompt)} className="typewriter mb-4" style={{ fontSize: "22px", height: "60px" }} disabled={isLoading}>{isLoading ? 'Saving...' : 'Save This Character'}</button>
+                  <button onClick={() => handleSaveCharacter(imageUrl, prompt)} className="typewriter mb-4" style={{ fontSize: "22px", height: "60px" }} disabled={isLoading}>{isLoading ? 'Saving...' : 'Save This Character'}</button>
                 )}
                 <h2 className="text-3xl font-bold text-center mb-4">Meet <span className="text-red-500">{characterName || "Your Character"}</span></h2>
                 {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
@@ -617,56 +617,55 @@ export default function QuestionnairePage() {
       <Background />
 
       <div
-          className={`relative flex items-center justify-center transition-all duration-1000 ease-in-out ${
-            animationStage >= 2 ? "mt-6 mx-auto" : "my-auto mx-auto"
+        className={`relative flex items-center justify-center transition-all duration-1000 ease-in-out ${animationStage >= 2 ? "mt-6 mx-auto" : "my-auto mx-auto"
           }`}
-          style={{
-            width:
-              animationStage >= 1
-                ? `calc(90vw - ${sidebarOpen ? sidebarWidth : 0}px - ${leftSidebarOpen ? leftSidebarWidth : 0}px)`
-                : "40px",
-            maxWidth: "1000px",
-            height: "130px",
-            transition: "width 1s cubic-bezier(0.4,0,0.2,1)"
-          }}
-        >
-          <FlipCard
-            frontContent={
-              <>
-                <div className="absolute w-3 h-3 bg-black rounded-full top-4 left-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
-                <h1 className="text-center text-white font-bold w-full"
-                    style={{
-                      fontSize: "64px",
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      lineHeight: "130px",
-                      height: "130px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center"
-                    }}>
-                  {animatedTitle}
-                </h1>
-              </>
-            }
-            backContent={
-              <>
-                <div className="absolute w-3 h-3 bg-black rounded-full top-4 left-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div>
-                <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
-                <h1 className="text-center px-5 py-2 text-2xl text-white font-bold">
-                  Questionnaire for Character Natures &amp; AI Image Rendering
-                </h1>
-              </>
-            }
-            hide={false}
-          />
-        </div>
-      
+        style={{
+          width:
+            animationStage >= 1
+              ? `calc(90vw - ${sidebarOpen ? sidebarWidth : 0}px - ${leftSidebarOpen ? leftSidebarWidth : 0}px)`
+              : "40px",
+          maxWidth: "1000px",
+          height: "130px",
+          transition: "width 1s cubic-bezier(0.4,0,0.2,1)"
+        }}
+      >
+        <FlipCard
+          frontContent={
+            <>
+              <div className="absolute w-3 h-3 bg-black rounded-full top-4 left-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
+              <h1 className="text-center text-white font-bold w-full"
+                style={{
+                  fontSize: "64px",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  lineHeight: "130px",
+                  height: "130px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}>
+                {animatedTitle}
+              </h1>
+            </>
+          }
+          backContent={
+            <>
+              <div className="absolute w-3 h-3 bg-black rounded-full top-4 left-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full top-4 right-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 left-4"></div>
+              <div className="absolute w-3 h-3 bg-black rounded-full bottom-4 right-4"></div>
+              <h1 className="text-center px-5 py-2 text-2xl text-white font-bold">
+                Questionnaire for Character Natures &amp; AI Image Rendering
+              </h1>
+            </>
+          }
+          hide={false}
+        />
+      </div>
+
       {/* Right Sidebar (User Hub) */}
       <div ref={leftSidebarRef} style={{ width: leftSidebarOpen ? leftSidebarWidth : 0 }} className={`bg-[#ffff00] dark:bg-gray-800 p-4 transition-all duration-500 ease-in-out h-full overflow-y-auto fixed right-0 top-0 flex flex-col z-20 ${leftSidebarOpen ? "block" : "hidden"}`}>
         <div className="w-full text-sm flex flex-col items-center justify-center h-full">
@@ -706,7 +705,7 @@ export default function QuestionnairePage() {
         </div>
       </div>
       <button id="left-resizer" onClick={() => setLeftSidebarOpen(!leftSidebarOpen)} onMouseDown={handleMouseDown} style={{ right: leftSidebarOpen ? leftSidebarWidth : 0 }} className={`fixed top-1/2 transform -translate-y-1/2 bg-black font-bold text-white px-3 py-20 rounded-l-lg transition-all duration-200 ease-in-out z-30 hover:bg-gray-800`}>{leftSidebarOpen ? "▶" : "◀"}</button>
-      
+
       {/* Left Sidebar (Question List) */}
       {!isViewMode && (
         <>
@@ -723,7 +722,7 @@ export default function QuestionnairePage() {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col items-center p-6 transition-all duration-500 ease-in-out" style={{ marginLeft: sidebarOpen && !isViewMode ? sidebarWidth : 0, marginRight: leftSidebarOpen ? leftSidebarWidth : 0, minHeight: '100vh' }}>
         <div className="pt-12 w-full">
-            {renderCharacterCreation()}
+          {renderCharacterCreation()}
         </div>
       </div>
     </main>
